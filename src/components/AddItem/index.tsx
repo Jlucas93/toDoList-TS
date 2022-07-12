@@ -10,13 +10,13 @@ export const AddArea = ({Click}: props) => {
   const [inputValue, setInputValue] = useState('')
   //Refs
   const inputRef = useRef<HTMLInputElement>(null)
-
+  //Callbacks
   const handleClick = (event: String) => {
     if(inputValue != ''){
       Click(event)
+      setInputValue('')
     }
   }
-
   const handleChange = () => {
     if (inputRef.current)
       setInputValue(inputRef.current.value)
@@ -33,6 +33,7 @@ export const AddArea = ({Click}: props) => {
         type="text"
         placeholder="Adicionar nova tarefa"
         ref={inputRef}
+        value={inputValue}
         onChange={() => handleChange()}
       />
     </S.Container>

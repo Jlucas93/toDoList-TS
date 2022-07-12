@@ -9,11 +9,9 @@ interface Item {
 interface Props {
     List: Item
 }
-
 const ListItem = ({ List }: Props) => {
     //States
     const [isChecked, setIsChecked] = useState(List.done)
-
     //Render
     return (
         <S.Container done={isChecked}>
