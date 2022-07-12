@@ -16,7 +16,7 @@ const ListItem = ({ List }: Props) => {
 
     //Render
     return (
-        <S.Container>
+        <S.Container done={isChecked}>
             <input
                 type="checkbox"
                 checked={isChecked}
