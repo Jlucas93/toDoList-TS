@@ -15,7 +15,7 @@ function App() {
     { id: 2, name: 'Estudar', done: false },
   ])
 
-  //Render
+  // Render
   return (
     <>
       <S.Container>
@@ -25,7 +25,7 @@ function App() {
               Lista de tarefas
             </S.Header>
 
-            <AddItem/>
+            <AddItem />
 
             {list.map((list, index) => (
               <Listitem
