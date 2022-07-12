@@ -1,16 +1,22 @@
 import { useState, useRef } from 'react';
 import * as S from './style'
 
-export const AddArea = () => {
+interface props{
+  Click: (taskName: String) => void;
+}
+
+export const AddArea = ({Click}: props) => {
   // States
   const [inputValue, setInputValue] = useState('')
-
+  //Refs
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const handleClick = () => {
-
-    console.log(inputValue)
+  const handleClick = (event: String) => {
+    if(inputValue != ''){
+      Click(event)
+    }
   }
+
   const handleChange = () => {
     if (inputRef.current)
       setInputValue(inputRef.current.value)
@@ -19,7 +25,7 @@ export const AddArea = () => {
   return (
     <S.Container>
       <button
-        onClick={() => handleClick()}
+        onClick={() => handleClick(inputValue)}
       >
         <S.Icon />
       </button>

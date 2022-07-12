@@ -3,7 +3,7 @@ import * as S from './style'
 
 interface Item {
     id: number,
-    name: string,
+    name: String,
     done: boolean,
 }
 interface Props {

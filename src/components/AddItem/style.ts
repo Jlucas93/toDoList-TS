@@ -7,6 +7,7 @@ export const Icon = styled(SVG_Icon)`
 `
 
 export const Container = styled.div`
+
 display: flex;
 align-items: center;
 justify-content: center;
@@ -34,7 +35,6 @@ button{
         transition: .4s;
     }
 }
-
     input{
     background-color: transparent;
     color: #fff;
