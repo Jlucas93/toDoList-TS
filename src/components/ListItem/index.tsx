@@ -1,7 +1,11 @@
 import { useState } from 'react'
 import * as S from './style'
-import { Item } from '../../types/item'
 
+interface Item {
+    id: number,
+    name: string,
+    done: boolean,
+}
 interface Props {
     List: Item
 }

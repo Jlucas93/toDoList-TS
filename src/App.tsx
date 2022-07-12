@@ -1,8 +1,12 @@
 import { useState } from 'react'
-import { Item } from './types/item'
 import Listitem from './components/ListItem'
 import * as S from './styles'
 
+interface Item {
+  id: number,
+  name: string,
+  done: boolean,
+}
 function App() {
   //States
   const [list, setList] = useState<Item[]>([
