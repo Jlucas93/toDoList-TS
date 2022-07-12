@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Listitem from './components/ListItem'
+import AddItem from './components/AddItem'
 import * as S from './styles'
 
 interface Item {
@@ -23,6 +24,8 @@ function App() {
             <S.Header>
               Lista de tarefas
             </S.Header>
+
+            <AddItem/>
 
             {list.map((list, index) => (
               <Listitem

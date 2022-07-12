@@ -22,7 +22,6 @@ const ListItem = ({ List }: Props) => {
                 checked={isChecked}
                 onChange={(e) => {
                     setIsChecked(e.target.checked)
-                    console.log(isChecked)
                     }}
             />
             <label>
