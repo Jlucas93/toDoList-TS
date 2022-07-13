@@ -1,4 +1,4 @@
-export default function Icon(props: any) {
+export default function IconTrash(props: any) {
   return (
     <svg
       width="1rem"

@@ -25,7 +25,7 @@ button{
     margin-right: .5rem;
     background-color: transparent;
     color: #fff;
-    border: 1px solid #fff;
+    border: 1px solid transparent;
     border-radius: .2rem;
     outline: none;
     cursor: pointer;

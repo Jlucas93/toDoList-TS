@@ -1,19 +1,18 @@
-import { useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import * as S from './style'
 
-interface props{
-  Click: (taskName: String) => void;
+interface Props {
+  click: (taskName: String) => void
 }
-
-export const AddArea = ({Click}: props) => {
+const AddArea: React.FC<Props> = ({click}) => {
   // States
   const [inputValue, setInputValue] = useState('')
   //Refs
   const inputRef = useRef<HTMLInputElement>(null)
   //Callbacks
   const handleClick = (event: String) => {
-    if(inputValue != ''){
-      Click(event)
+    if (inputValue != '') {
+      click(event)
       setInputValue('')
     }
   }
